@@ -1,0 +1,16 @@
+@import "tailwindcss";
+@custom-variant dark (&:where(.dark, .dark *));
+
+* {
+  @apply transition-colors duration-200;
+}
+
+input[type="text"]:focus ~ .input-text,
+input[type="text"]:not(:placeholder-shown) ~ .input-text {
+  @apply dark:text-white transform -translate-y-9 -translate-x-2 scale-80 left-4;
+}
+
+input[type="password"]:focus ~ .input-password,
+input[type="password"]:not(:placeholder-shown) ~ .input-password {
+  @apply dark:text-white transform -translate-y-9 -translate-x-2 scale-80 left-4;
+}
