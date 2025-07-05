@@ -1,5 +1,6 @@
 @import "tailwindcss";
 @custom-variant dark (&:where(.dark, .dark *));
+@plugin "daisyui";
 
 * {
   @apply transition-colors duration-200;
@@ -13,4 +14,23 @@ input[type="text"]:not(:placeholder-shown) ~ .input-text {
 input[type="password"]:focus ~ .input-password,
 input[type="password"]:not(:placeholder-shown) ~ .input-password {
   @apply dark:text-white transform -translate-y-9 -translate-x-2 scale-80 left-4;
+}
+
+/* global.css or inside tailwind */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+.no-scrollbar {
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+  overflow: hidden;
+}
+
+.hide-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.hide-scrollbar {
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
 }

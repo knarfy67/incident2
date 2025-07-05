@@ -9,6 +9,6 @@ export default {
   theme: {
     extend: {},
   },
-  plugins: [],
-  darkMode:"class",
-}
+  plugins: [require("tailwind-scrollbar-hide")],
+  darkMode: "class",
+};
